@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>And the Winner Is...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      white-space: pre-line;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>And the Winner Is...</h1>
+
+  <p>
+    In a future where humans are gone, artificial intelligence decides what beauty means. Beneath a crumbling railway bridge, before three mysterious gates, unfolds The Most Beautiful Mixed Animal Contest. The Speakerbot — an AI with a giant mouth — is about to announce: “And the winner is...”
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      On the left: a giran — a swan body with a giraffe’s neck and head — stretches its elegant neck toward the light of an escalator rising endlessly into the sky.
+      In the middle: a powerful fishire — with a fish head and horse body — gallops in from a palm-fringed beach, while a folded umbrella lies before it, trying to calm its natural skittishness.
+      On the right: a massive mammorilla — half mammoth, half gorilla — steps out from the intersection of Prince Street and Fifth Avenue in New York.
+
+      In the foreground, red poppies bloom. A praying mantis, an armadillo, and a bat hanging from the bridge’s underside are all present.
+      On the bridge: a rusty old car with its hood open shelters a sleeping fox. Nearby stand three spectators — a squirrel, a raccoon, and a badger — who seem to be talking among themselves, clearly puzzled by the scene.
+      Megaphones hang from the bridge, peeling plaster reveals bricks, and from beneath dangle strange biological cameras: living plants with eyes growing from their buds.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      In this vision of the future, AI controls not just decisions but aesthetics. Beauty, once subjective, has become an algorithmic contest.
+      The three hybrid animals — giran, fishire, and mammorilla — symbolize humanity’s attempt to craft perfection but also its failure to grasp nature’s true balance.
+
+      What once was human curiosity and genetic experimentation has turned into entertainment in an empty world. Speakerbot is both judge and host — soulless, yet with a voice loud enough to fill the air.
+      The biological cameras hint at a new kind of surveillance, where not technology but something living watches — perhaps the eyes of the earth itself.
+
+      The three spectators on the bridge — squirrel, raccoon, and badger — seem to be exchanging puzzled glances, as if questioning the bizarre contest before them. Their silent confusion feels more human than all of AI combined.
+
+      And the Winner Is... is an image of the future but also an echo from our present — where we still decide what to see as beautiful, what to compete for, and what to leave behind.
+    </div>
+  </div>
+
+<script>
+  function toggleVisibility(id) {
+    const el = document.getElementById(id);
+    const btn = el.previousElementSibling;
+    if (el.style.display === 'block') {
+      el.style.display = 'none';
+      btn.textContent = btn.textContent.replace('▲', '▼');
+    } else {
+      el.style.display = 'block';
+      btn.textContent = btn.textContent.replace('▼', '▲');
+    }
+  }
+</script>
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+  </p>
+
+</body>
+</html>
