@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tidal Basin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      white-space: pre-line;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      white-space: pre-line;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    /* Bildskydd */
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>Tidal Basin</h1>
+    <div class="image-wrapper">
+      <img src="bilder/tidalbasin.jpg" alt="Illustration av verket 'Tidal Basin'">
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    A post-apocalyptic Tidal Basin in Washington D.C., where nature has reclaimed the land.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      A hybrid swan-giraffe, called a giran, swims through the choppy waters. The water shows small waves stirred by the wind. Along the shore, a crocodile's head barely breaks the water's surface, and a dilapidated rowboat lies half-beached nearby. A frog sits on a stone in front of the boat, while an African bird, the shoebill stork, stands nearby. An elephant also stands close to the shore. Cherry blossom branches extend from the left side, their flowers and sparse leaves reaching inward. A pelican approaches for landing near a cloud blown by the wind. On the right, a mangrove tree with roots submerged in the water supports a carnivorous plant above, trapping a small bird. A puffin perches on the mangrove roots. Lotus flowers float gently near the lower right.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      In the background, the Jefferson Memorial rises, with Lincoln seated within, silent witness to the new natural order. A large humpback whale breaches the center of the basin, splashing water as it defies its typical ocean habitat—symbolizing nature's reclaiming of the Earth in the absence of humans. The scene portrays a world transformed: familiar landmarks engulfed by wild, fantastical creatures and plants that blend species and ecosystems. The mangrove’s upper carnivorous foliage, the hybrid giran, and the unexpected visitors like the puffin and pelican all hint at survival, adaptation, and the strange beauty emerging after humanity’s retreat.
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      const btn = el.previousElementSibling;
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+        btn.textContent = btn.textContent.replace('▲', '▼');
+      } else {
+        el.style.display = 'block';
+        btn.textContent = btn.textContent.replace('▼', '▲');
+      }
+    }
+  </script>
+
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+  </p>
+
+</body>
+</html>

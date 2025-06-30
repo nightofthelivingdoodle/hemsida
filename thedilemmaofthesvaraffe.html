@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Dilemma of the Svaraffe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      white-space: pre-line;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      white-space: pre-line;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    /* Bildskydd */
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>The Dilemma of the Svaraffe</h1>
+    <div class="image-wrapper">
+      <img src="bilder/thedilemmaofthesvaraffe.jpg" alt="Illustration av verket 'The Dilemma of the Svaraffe'">
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    A surreal scene centers on a majestic gateway representing a pivotal choice between two realms: the wild, thrilling but dangerous world, and a peaceful, secure life that might also feel ordinary and confining. In the foreground, a “Svaraffe”—a creature with a giraffe’s body and a swan’s head—stands poised to decide which path to take.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      The gateway, inspired by Greenwich Village’s iconic entrance, carries the motto “Live Free or Die,” highlighting the tension between freedom and security. Beyond the gateway lies a quiet path winding up to a small cottage surrounded by mountains and sunlight, symbolizing a safe but potentially dull existence. Outside the gateway, the wild realm bursts with strange plants and creatures, where a large walrus rests atop the structure while moths keep watch. Nearby, a rare <em>Rafflesia arnoldii</em> adds a fascinating, almost uncanny detail. A lizard crawls beside one of the moths, and an armadillo peeks shyly from the vegetation.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      This artwork captures the inner conflict embodied by the “Svaraffe,” a hybrid creature with the body of a giraffe and the head of a swan, standing at the crossroads between adventure and safety. The question it faces is whether to stay in the wild, unpredictable world outside the gateway—alive with excitement, danger, and untamed nature—or to pass through into a calm, secure life symbolized by a cozy cottage nestled in peaceful mountains. The gateway displays the motto “Live Free or Die,” emphasizing the core of this dilemma. These two realms embody contrasting philosophies: one cherishing freedom and risk, the other offering order and routine, which can sometimes feel confining or even mundane. Around the gateway, the wild world comes alive with unusual life: a massive walrus lounges on top, a pelican watches quietly, and giant moths stand guard. On the ground, a scorpion hints at hidden dangers while a towering cactus crowned by a puffin rises nearby. An armadillo peeks from the undergrowth, and a lizard explores near the moths. The presence of <em>Rafflesia arnoldii</em>, a large tropical flower with thick, fleshy petals and a spiked center, adds an uncanny, almost otherworldly element to the scene. Beyond the gateway, a winding path leads to the peaceful cottage surrounded by alpine scenery where a second sun shines brightly overhead. The contrast between this tranquil realm and the vibrant wildness outside invites reflection on the balance between freedom and safety, excitement and comfort, and the choices we all face between two very different worlds.
+    </div>
+  </div>
+
+<script>
+  function toggleVisibility(id) {
+    const el = document.getElementById(id);
+    const btn = el.previousElementSibling;
+    if (el.style.display === 'block') {
+      el.style.display = 'none';
+      btn.textContent = btn.textContent.replace('▲', '▼');
+    } else {
+      el.style.display = 'block';
+      btn.textContent = btn.textContent.replace('▼', '▲');
+    }
+  }
+</script>
+
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+  </p>
+
+</body>
+</html>

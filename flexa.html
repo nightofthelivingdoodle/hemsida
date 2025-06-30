@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flexa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+
+  <div class="title-container">
+    <h1>Flexa</h1>
+    <div class="image-wrapper">
+      <img src="bilder/flexa.jpg" alt="Illustration av verket 'Flexa'" draggable="false" />
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    A powerful figure sits confidently on a skateboard, exuding strength and surreal symbolism.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      A muscular man wearing a crown smokes while seated on a skateboard. Surreal elements surround him, hinting at complex interactions between power, fertility, and barriers.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      Flexa centers on a muscular man seated on a skateboard, his torso and arms flexed to emphasize his strength and control. He wears a crown and smokes a large joint, blending symbols of authority and rebellion. Nearby stands a tall chimney with a funnel that draws in smoke from the joint, channeling it upward. Around the chimney lies a large, sleepy fish with a mustache and a prominent tail fin, curled on the ground. This fish has a long snout that draws sperm from the man’s pouch, fertilizing its eggs. The eggs travel through a tunnel labeled “nothing,” beside a locked gate marked “everything,” symbolizing potential opportunities beyond reach. The fish holds the key to this gate. A snail crawls up the chimney, and a giant moth perches on a hot air balloon basket. Pineapples and fungi add to the surreal atmosphere. The work explores themes of power, fertility, constraint, and the tension between limitation and possibility, all centered on the figure’s bold, commanding posture.
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      const btn = el.previousElementSibling;
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+        btn.textContent = btn.textContent.replace('▲', '▼');
+      } else {
+        el.style.display = 'block';
+        btn.textContent = btn.textContent.replace('▼', '▲');
+      }
+    }
+  </script>
+
+ 
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+  </p>
+</body>
+</html>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madness of Men</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    /* Nya stilar för bildskyddet */
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>Madness of Men</h1>
+    <div class="image-wrapper">
+      <img src="bilder/madnessofmen.jpg" alt="Illustration av verket 'Madness of Men'">
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    A mother and daughter walk along a fractured road toward a towering monument—North Korea’s Arch of Reunification. Their backs are turned to us as they step into a world unraveling. Scattered symbols surround them: relics of faith, politics, war, and extinction. It’s a scene caught between collapse and reckoning.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      The cracked road is littered with metaphors: a tilted tank, an oversized beetle devouring a dead scorpion, and bomb craters pocking the ground.
+      To the left, a large opium bird—part mechanical, part organic—looms over a sleek car that might offer escape.
+      To the right, two ostriches flee in panic.
+      Above, a crane glides across the sky—perhaps a final flicker of hope.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      This piece explores the consequences of unchecked ideology and inherited power.
+      The Kaaba, the Menorah, a crucifix, a Mormon temple—all stand together, stripped of sanctity, questioning the balance between belief and control.
+      Hanging from a dying tree, a broken dreamcatcher laments the erasure of Indigenous cultures.
+      
+      Through the arch, Putin’s Crimean Bridge emerges as a symbol of imperial pride, backed by Mount Rushmore—a haunted monument to Western dominance.
+      
+      Above all of it looms a nuclear mushroom cloud, marking the ultimate outcome of collective delusion.
+      
+      *Madness of Men* is not an accusation, but an invitation to witness.
+      To see how structures meant to unify have fractured instead, how symbols lose meaning under the weight of destruction.
+      The madness may belong to mankind, but recognition may still offer a path forward.
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      const btn = el.previousElementSibling;
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+        btn.textContent = btn.textContent.replace('▲', '▼');
+      } else {
+        el.style.display = 'block';
+        btn.textContent = btn.textContent.replace('▼', '▲');
+      }
+    }
+  </script>
+
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+  </p>
+
+</body>
+</html>

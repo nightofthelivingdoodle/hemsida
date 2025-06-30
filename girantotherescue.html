@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giran to the rescue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      white-space: pre-line;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      white-space: pre-line;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>Giran to the Rescue</h1>
+    <div class="image-wrapper">
+      <img src="bilder/girantotherescue.jpg" alt="Illustration av verket 'Giran to the rescue'">
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    The image shows a confined, heavy atmosphere where a woman is burdened and a child lies neglected nearby. The setting is full of symbolic creatures and objects, evoking themes of struggle, watchfulness, and the need for self-rescue.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      In a crowded prison yard, a naked woman carries two heavy buckets, burdened and unable to care for the child lying curled in the scoop of a nearby tractor. Various animals—birds, a cat, an armadillo, and insects—move through the tight space filled with debris and signs of danger, including a radiation warning. Missiles lean silently against a gate. The mythical Giran flies in, symbolizing that rescue must come from within. The background shows the Edinburgh Airport Tower, representing society’s watchful gaze. Subtle details like a foxglove flower and a telephone add layers of meaning to the scene.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      In a tightly packed prison yard, a naked woman stands burdened, carrying two heavy buckets. She represents a figure who lacks the strength to properly care for the neglected child lying curled in the scoop of a nearby tractor, turned slightly away from her. The yard is filled with symbolic creatures: a pelican perched on the tractor’s roof, a vulture’s head peering over the walls, a cautious cat moving quietly through the debris, and a curled armadillo resting on the ground. Missiles lean silently against a gate, marking boundaries without aggression. Above, the mythical Giran flies in—a fantastical creature symbolizing the idea that rescue must come from oneself, as no external savior truly exists. The background features the Edinburgh Airport Tower, standing tall as a symbol of society’s watchful gaze. Additional details such as a foxglove flower, a telephone, and a radiation warning sign evoke a toxic, hazardous environment. Scattered in the scene are landmines, where the artist’s signature is subtly embedded. The entire artwork layers themes of confinement, emotional neglect, vigilance, and the difficult path to self-liberation.
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      const btn = el.previousElementSibling;
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+        btn.textContent = btn.textContent.replace('▲', '▼');
+      } else {
+        el.style.display = 'block';
+        btn.textContent = btn.textContent.replace('▼', '▲');
+      }
+    }
+  </script>
+
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+  </p>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>And the Winner Is...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    /* Bildskydd */
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>And the Winner Is...</h1>
+    <div class="image-wrapper">
+      <img src="bilder/andthewinneris.jpg" alt="Illustration av verket 'And the Winner Is...'">
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    In a future where humans are gone, artificial intelligence decides what beauty means. Beneath a crumbling railway bridge, before three mysterious gates, unfolds The Most Beautiful Mixed Animal Contest. The Speakerbot — an AI with a giant mouth — is about to announce who the winner is.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      On the left: a giran — a swan body with a giraffe’s neck and head — stretches its elegant neck toward the light of an escalator rising endlessly into the sky.
+      In the middle: a powerful fishire — with a fish head and horse body — gallops in from a palm-fringed beach, while a folded umbrella lies before it, trying to calm its natural skittishness.
+      On the right: a massive mammorilla — half mammoth, half gorilla — steps out from the intersection of Prince Street and Fifth Avenue in New York.
+
+      In the foreground, red poppies bloom. A praying mantis, an armadillo, and a bat hanging from the bridge’s underside are all present.
+      On the bridge: a rusty old car with its hood open shelters a sleeping fox. Nearby stand three spectators — a squirrel, a raccoon, and a badger — who seem to be talking among themselves, clearly puzzled by the scene.
+      Megaphones hang from the bridge, peeling plaster reveals bricks, and from beneath dangle strange biological cameras: living plants with eyes growing from their buds.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      In this vision of the future, AI controls not just decisions but aesthetics. Beauty, once subjective, becomes calculated—based on symmetry, rarity, and digitized approval. The Speakerbot is not alone in its judgment: behind the gates are unknown AI councils evaluating criteria humanity no longer understands.
+
+      The contest is a spectacle and a warning. A satire on how selection and taste may be redefined when those judging are no longer bound by emotion, culture, or context. And yet, even here, something of the old world lingers—in the flowers, in the animals’ confusion, in the audience's chatter. Perhaps beauty still resists calculation.
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      const btn = el.previousElementSibling;
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+        btn.textContent = btn.textContent.replace('▲', '▼');
+      } else {
+        el.style.display = 'block';
+        btn.textContent = btn.textContent.replace('▼', '▲');
+      }
+    }
+  </script>
+
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+  </p>
+</body>
+</html>

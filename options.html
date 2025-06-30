@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Options</title>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+<style>
+body {
+  font-family: 'Courier Prime', monospace;
+  font-weight: 300;
+  background-color: #f9f8f6;
+  color: #000;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 30px 60px;
+  line-height: 1.7;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.4em;
+  font-weight: 300;
+  text-align: center;
+}
+p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  white-space: pre-line;
+}
+.toggle-button {
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 1em 0 0.4em 0;
+  user-select: none;
+  letter-spacing: 0.05em;
+}
+.toggle-button:hover {
+  text-decoration: underline;
+  color: #555;
+}
+.toggle-content {
+  display: none;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #ccc;
+  white-space: pre-line;
+}
+.title-container {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.art-info {
+  font-style: italic;
+  font-size: 1em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+/* Bildskydd */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 1em;
+}
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+  display: block;
+}
+.watermark {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+  user-select: none;
+  font-family: 'Courier Prime', monospace;
+  font-weight: 300;
+}
+</style>
+</head>
+<body>
+
+<div class="title-container">
+  <h1>Options</h1>
+  <div class="image-wrapper">
+    <img src="bilder/options.jpg" alt="Illustration av verket 'Options'">
+    <div class="watermark">© EmmaKarolina</div>
+  </div>
+  <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+</div>
+
+<p>
+  This image is quiet, dark, and loaded. There’s a sense of stillness and aftermath — as if something irreversible has already happened, or is about to. It doesn’t shout, but it stays with you. It invites you to look, and if you choose to, it will show you more than you expected.
+</p>
+
+<div>
+  <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+  <div id="moreInfo" class="toggle-content">
+    At first glance, it’s a surreal landscape — a human-shaped tree, a giraffe head at a window, distant architecture, strange juxtapositions. But as the eye travels, themes emerge: symbols of death, escape, loneliness, and silence. Some are obvious, some are hidden in plain sight. Together, they build a heavy, poetic narrative — more felt than told. The tension lies in how quietly the pain is laid out, as if each object speaks in a whisper.
+  </div>
+</div>
+
+<div>
+  <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+  <div id="fullStory" class="toggle-content">
+
+    Every detail in this artwork carries personal and cultural significance. The human-shaped tree stands as a silent witness to methods of self-destruction — from the gun in the foreground to the tunnel emerging from between the tree’s legs, where a train approaches from the distance. A window, positioned where the hand would be, frames a giraffe’s head peering in — an unexpected visitor, or a surreal intrusion of life into the frozen scene. Above the window, a bathtub is overflowing — a quiet but chilling reference to self-harm in water, where the tap runs to prevent blood from clotting.
+
+    A syringe lies hidden in the tree’s arm, next to a resting moth — subtle details easily missed, yet deeply telling. A shattered windowpane hints at the use of broken glass. The traffic light above glows red — an inversion of the usual meaning, marking not a stop but a possible go-ahead into oblivion — with an electric symbol below offering another silent option. A scythe stands in front of the tree, the timeless symbol of death, accompanied by two crows: one perched, one mid-flight.
+
+    Other scattered elements — a bottle, a razorblade, a container of pills — paint a picture of various ways to dull pain or end it altogether. In the background, the gravestone marked “E23” serves as a signature and timestamp. The Grand Hotel in Lund stands solemnly, a place away from home — for those who don't want their loved ones to be the ones to find them. Behind it, a decorated Christmas tree shines, reflecting the heaviness many feel during the holidays.
+
+    A double-decker bus is a reference to a song by The Smiths, and a small car with a hose fed through its window tells its own quiet story. The Golden Gate Bridge stretches across the distant sky — a real-world symbol of finality. A noose-shaped rope appears, not centrally placed but present among the details, quiet and threatening.
+
+    This drawing does not sensationalize. Instead, it holds space for the heaviness, the complexity, and the silence around suicidal thoughts — without asking for resolution, only recognition.
+  </div>
+</div>
+
+<script>
+function toggleVisibility(id) {
+  const el = document.getElementById(id);
+  const btn = el.previousElementSibling;
+  if (el.style.display === 'block') {
+    el.style.display = 'none';
+    btn.textContent = btn.textContent.replace('▲', '▼');
+  } else {
+    el.style.display = 'block';
+    btn.textContent = btn.textContent.replace('▼', '▲');
+  }
+}
+</script>
+
+<p style="text-align: center; margin-top: 40px;">
+  <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+</p>
+
+</body>
+</html>

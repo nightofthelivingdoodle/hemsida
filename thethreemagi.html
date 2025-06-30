@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Three Magi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      white-space: pre-line;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      white-space: pre-line;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    /* Bildskydd */
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>The Three Magi</h1>
+    <div class="image-wrapper">
+      <img src="bilder/thethreemagi.jpg" alt="Illustration av verket 'The Three Magi'">
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    A mystical portrait of hope and dreams, where a woman stands amid symbols of longing, change, and future possibilities. The air vibrates with quiet wishes and the promise of new beginnings.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      A woman at the center wears a crown that extends into large arrows, representing her dreams radiating outward. To the left, the Chrysler Building symbolizes a fantasy of a life in New York. Near it stands a giraffe, and beneath are gladiolus flowers — symbols of transformation. Lilies of the valley bloom nearby, alongside forget-me-not flowers.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      This artwork layers personal aspirations and memories into symbolic imagery. An easel signifies a passion for painting and creativity, while an open blank book on the floor invites an unwritten future. A bathtub features a whale’s tail emerging from the water, alluding to the artist’s wonder at wild whales and a love for baths.
+
+      In the lower right, a fireplace holds two glasses of sparkling champagne, evoking hopes for love and companionship. High above, three Easter Island-style stone figures—the Three Magi—represent spiritual journeys and distant travels to places like Easter Island.
+
+      The Bethesda Fountain from Central Park appears in the background, along with the Guggenheim Museum.
+    </div>
+  </div>
+
+<script>
+  function toggleVisibility(id) {
+    const el = document.getElementById(id);
+    const btn = el.previousElementSibling;
+    if (el.style.display === 'block') {
+      el.style.display = 'none';
+      btn.textContent = btn.textContent.replace('▲', '▼');
+    } else {
+      el.style.display = 'block';
+      btn.textContent = btn.textContent.replace('▼', '▲');
+    }
+  }
+</script>
+<p style="text-align: center; margin-top: 40px;">
+  <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+</p>
+
+</body>
+</html>

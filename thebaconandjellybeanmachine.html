@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Bacon and Jellybean Machine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+      background-color: #f9f8f6;
+      color: #000;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.4em;
+      font-weight: 300;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      white-space: pre-line;
+    }
+    .toggle-button {
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 1em 0 0.4em 0;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+    .toggle-button:hover {
+      text-decoration: underline;
+      color: #555;
+    }
+    .toggle-content {
+      display: none;
+      font-size: 1.1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      white-space: pre-line;
+    }
+    .title-container {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .art-info {
+      font-style: italic;
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    /* Bildskydd */
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+      display: block;
+    }
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 3px 6px;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>The Bacon and Jellybean Machine</h1>
+    <div class="image-wrapper">
+      <img src="bilder/thebaconandjellybeanmachine.jpg" alt="Illustration av verket 'The Bacon and Jellybean Machine'">
+      <div class="watermark">© EmmaKarolina</div>
+    </div>
+    <p class="art-info">Ink and graphite on paper, original, 24 × 30 cm</p>
+  </div>
+
+  <p>
+    A magical machine transforms unexpected ingredients in a strange world shaped by survival and invention.
+  </p>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('moreInfo')">More Info ▼</div>
+    <div id="moreInfo" class="toggle-content">
+      In a ruined future, a skeletal woman lives on the edge of forest and wasteland. She uses a mystical staff and an elaborate machine to craft rare luxuries—bacon and jellybeans. The room is filled with oddities: a fruit-bearing tree, candy vessels, and signs of intrusion. Three wild boars charge in, but she defends her realm with light.
+    </div>
+  </div>
+
+  <div>
+    <div class="toggle-button" onclick="toggleVisibility('fullStory')">The Full Story ▼</div>
+    <div id="fullStory" class="toggle-content">
+      This post-apocalyptic scene follows a lone woman who survived nuclear devastation, her body reduced to a skeleton with only part of her face intact. Her skull is open, exposing her brain, yet she lives—animated by a radiant staff that allows her to breathe and move despite lacking internal organs. She resides at the threshold between forest and wasteland, where she crafts rare goods using magic and machinery.
+
+      At the center stands The Bacon and Jellybean Machine, an elaborate contraption powered by salt, sugar, and animal matter. Two large vats are marked with chemical symbols. Overhead hang two butchered pigs. Her work is grim, precise, and strangely beautiful.
+
+      Inside the room, a tree grows that bears all the fruits of the world, allowing her to flavor her creations endlessly. A goat peeks in through a broken window. An armadillo squeezes through a hole in the lower part of a door. A puffin rests in the tree. From the ceiling hangs a Le Klint lamp, elegant and out of place. A dodo stands on the floor—silent, still—a quiet symbol of extinction. A large beetle nears the machine, drawn by the scent of bacon. On the right, a butcher’s block holds a heavy cleaver, stained from use. A taxidermied blowfish hangs above, while a large moth clings to the wall. A pair of cowboy boots wait beside the door.
+
+      Then the intruders come—three wild boars attempting to rescue their kin. But the woman lifts her staff. Beams of light shoot forward. The animals, too, will be transformed—into sweets and salt. In this space of decay and wonder, she is alone but sovereign.
+    </div>
+  </div>
+
+<script>
+  function toggleVisibility(id) {
+    const el = document.getElementById(id);
+    const btn = el.previousElementSibling;
+    if (el.style.display === 'block') {
+      el.style.display = 'none';
+      btn.textContent = btn.textContent.replace('▲', '▼');
+    } else {
+      el.style.display = 'block';
+      btn.textContent = btn.textContent.replace('▼', '▲');
+    }
+  }
+</script>
+<p style="text-align: center; margin-top: 40px;">
+  <a href="index.html" style="text-decoration: none; color: #000; font-weight: bold;">Home</a>
+</p>
+
+</body>
+</html>
